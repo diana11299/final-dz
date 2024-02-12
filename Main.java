@@ -42,21 +42,23 @@ public static void main(String[] args) {
             e.printStackTrace();
            
         }    
-        data.put(lastName, dataString);
+        // data.put(lastName, dataString);
     }
     
-    for(Map.Entry<String, String> entry : data.entrySet()){
-        System.out.println(entry.getKey()+":"+entry.getValue());
-    }
+    // for(Map.Entry<String, String> entry : data.entrySet()){
+    //     System.out.println(entry.getKey()+":"+entry.getValue());
+    // }
+    
     scanner.close();
 }
+
     private static boolean isValidDate(String date){
-        String regex = "\d{2}/.\d{2}.\d{4}";
+        String regex = "d{2}.d{2}.d{4}";
         return date.matches(regex);
     }
 
     private static boolean isValidPhoneNumber(String phoneNumber){
-        String regex = "\d+";
+        String regex = "d";
         return phoneNumber.matches(regex);    
     }
 
@@ -64,3 +66,4 @@ public static void main(String[] args) {
         return gender.equals("f")||gender.equals("m");
     }
 }
+
